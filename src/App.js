@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Inicio } from './Components/Inicio.js';
+import { Login } from './Components/Login.js';
+import { Registrar } from './Components/Registrar.js';
+import './Css/App.css';
+import { Container, Ratio, Button, Form, Card, CardGroup, Col, Row, Alert, FormGroup, Nav, Navbar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+function Enrutador() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/' element={<Inicio />}></Route>
+      <Route path='/Autenticar' element={<Autenticacion />}></Route>
+    </Routes>
   );
 }
 
-export default App;
+export function Autenticacion() {
+  return (
+    <>
+      <div className=' d-flex align-items-center justify-content-center bg-dark' style={{height: "100vh"}}>
+        <Row className='p-5 no-gutters' style={{height: "50vh"}}>
+          <Col className='col-md-6 p-5 shadow-lg  bg-dark text-white'>
+            <Login />
+          </Col>
+          <Col className='col-md-6 shadow-lg bg-light bg-image p-5' style={{backgroundColor: '#ebebeb'}}>
+            <Registrar />
+          </Col>
+        </Row>
+      </div>
+    </>
+  );
+}
+
+
+export default Enrutador;
