@@ -20,11 +20,11 @@ export function Autenticacion() {
   return (
     <>
       <div className=' d-flex align-items-center justify-content-center bg-dark' style={{height: "100vh"}}>
-        <Row className='p-5 no-gutters' style={{height: "50vh"}}>
-          <Col className='col-md-6 p-5 shadow-lg  bg-dark text-white'>
+        <Row className='p-5 shadow-xl no-gutters vw-100' style={{height: "50vh"}}>
+          <Col className='col-md-6 p-5 shadow-lg bg-dark text-white'>
             <Login />
           </Col>
-          <Col className='col-md-6 shadow-lg bg-light bg-image p-5' style={{backgroundColor: '#ebebeb'}}>
+          <Col className='col-md-6 shadow-lg p-5' style={{backgroundColor: '#198754'}}>
             <Registrar />
           </Col>
         </Row>

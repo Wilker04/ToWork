@@ -7,7 +7,7 @@ export function Registrar() {
     return (
         <>
             <div className="form-style">
-                <h4 className="pb-3 text-white">Registrar</h4>
+                <h4 className="pb-3 ">Registrar</h4>
                 <Form id='registrar'>
                     <Form.Group className="form-group pb-3">
                         <Form.Control type="email" className='text-dark' placeholder="Email" id="email" aria-describedby="emailHelp" />
